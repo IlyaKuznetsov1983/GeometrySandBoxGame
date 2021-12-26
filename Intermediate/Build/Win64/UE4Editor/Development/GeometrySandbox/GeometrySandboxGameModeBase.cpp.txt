@@ -1,0 +1,7 @@
+G:\IT\SHOOTer\GeometrySandbox\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandbox\Definitions.GeometrySandbox.h
+G:\IT\SHOOTer\GeometrySandbox\Source\GeometrySandbox\GeometrySandboxGameModeBase.h
+G:\IT\UE$\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+G:\IT\UE$\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+G:\IT\UE$\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+G:\IT\UE$\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+G:\IT\SHOOTer\GeometrySandbox\Intermediate\Build\Win64\UE4Editor\Inc\GeometrySandbox\GeometrySandboxGameModeBase.generated.h

@@ -21,6 +21,9 @@ void ABaseGeometryActor::BeginPlay()
 {
 	Super::BeginPlay();
 
+	InitialLocation = GetActorLocation();
+
+	//printTransform();
 
 	FTransform  Transform = GetActorTransform();
 	FVector Location = Transform.GetLocation();
@@ -35,8 +38,10 @@ void ABaseGeometryActor::BeginPlay()
 
 	UE_LOG(LogBaseGeometry, Error, TEXT("Human trasform %s"), *Transform.ToHumanReadableString());
 
-	  //printStringTypes();
-	  //printTypes();
+
+	  //PrintTransform();
+	  //PrintStringTypes();
+	  //PrintTypes();
 }
 
 
@@ -46,8 +51,37 @@ void ABaseGeometryActor::BeginPlay()
 // Called every frame
 void ABaseGeometryActor::Tick(float DeltaTime)
 {
-	Super::Tick(DeltaTime);
+	Super::Tick(DeltaTime); \
 
+		HandleMovement();
+}
+
+void ABaseGeometryActor::HandleMovement();
+
+
+
+
+
+
+	void ABaseGeometryActor::HandleMovement(); 
+{
+		switch (GeometryData.MoveType)
+		{
+		case EMovementType::Sin:
+		{
+			//z = z0 + amplitude * sin(freq * t);
+
+			FVector  CurrentLocation = GetActorLocation();
+			float Time = GetWorld()->GetTimeSeconds();
+			CurrentLocation.Z = InitialLocation.Z + GeometryData.Amplitude * FMath::Sin(GeometryData.Frequency * Time);
+			SetActorLocation(CurrentLocation);
+		}
+			break;
+		case EMovementType::Static:
+			break;
+		default:
+			break;
+		}
 }
 
 void ABaseGeometryActor::printTypes()
